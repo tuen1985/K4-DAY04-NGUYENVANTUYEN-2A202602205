@@ -17,14 +17,14 @@
 
 ## 2. Luật của nhóm bạn (phải điền)
 
-| Tình huống | Luật nhóm bạn chọn | Vì sao |
-| :--- | :--- | :--- |
-| Hông của người mặc quần áo dài | Chấm ước lượng ngang thắt lưng (mấu chuyển xương đùi), đặt v = 1 | Vải áo/quần dài che mất xương, nhưng người vẫn ở trong khung hình nên không được bỏ sót v = 0. |
-| Tai bị tóc hoặc mũ bảo hiểm che một phần | Chấm vào vị trí lỗ tai giải phẫu, gắn v = 1 | Vẫn đoán được vị trí dựa vào trục đầu/mắt, giúp mô hình học được tỷ lệ khuôn mặt khi bị phụ kiện che. |
-| Người bị cắt ở mép ảnh (chỉ thấy từ hông trở lên) | Toàn bộ các khớp chân lọt ra ngoài mép ảnh đặt v = 0 và không chấm | Khớp nằm ngoài khung ảnh hoàn toàn, không thể phỏng đoán vùng pixel bên ngoài. |
-| Cổ tay nằm sau tay lái / sau thân mình | Ước lượng điểm nối giữa cẳng tay và bàn tay, đặt v = 1 | Khớp chỉ bị vật cản che khuất tạm thời (Occluded), người vẫn trong ảnh. |
-| Hai người chồng lên nhau | Gán đủ bộ 17 điểm cho từng người; phần thân người bị người kia đè lên thì chấm ước lượng và để v = 1 | Tránh nhầm lẫn nối xương giữa hai người và tránh xóa nhầm khớp của người đứng sau. |
-| Người nhỏ đến mức nào thì không gán nữa | Bounding box có chiều cao dưới 30 pixel hoặc mờ nhòe không phân biệt được đầu gối/khuỷu tay thì bỏ qua | Quá ít pixel khiến việc ước lượng sai lệch lớn, làm nhiễu tập huấn luyện. |
+| Tình huống | Luật nhóm bạn chọn | Vì sao | Ảnh minh họa |
+| :--- | :--- | :--- | :--- |
+| Hông của người mặc quần áo dài | Chấm ước lượng ngang thắt lưng (mấu chuyển xương đùi), đặt v = 1 | Vải áo/quần dài che mất xương, nhưng người vẫn ở trong khung hình nên không được bỏ sót v = 0. | [train_02](outputs/vis_train/train_02.jpg) |
+| Tai bị tóc hoặc mũ bảo hiểm che một phần | Chấm vào vị trí lỗ tai giải phẫu, gắn v = 1 | Vẫn đoán được vị trí dựa vào trục đầu/mắt, giúp mô hình học được tỷ lệ khuôn mặt khi bị phụ kiện che. | [train_03](outputs/vis_train/train_03.jpg) |
+| Người bị cắt ở mép ảnh (chỉ thấy từ hông trở lên) | Toàn bộ các khớp chân lọt ra ngoài mép ảnh đặt v = 0 và không chấm | Khớp nằm ngoài khung ảnh hoàn toàn, không thể phỏng đoán vùng pixel bên ngoài. | [train_10](outputs/vis_train/train_10.jpg) |
+| Cổ tay nằm sau tay lái / sau thân mình | Ước lượng điểm nối giữa cẳng tay và bàn tay, đặt v = 1 | Khớp chỉ bị vật cản che khuất tạm thời (Occluded), người vẫn trong ảnh. | [train_04](outputs/vis_train/train_04.jpg) |
+| Hai người chồng lên nhau | Gán đủ bộ 17 điểm cho từng người; phần thân người bị người kia đè lên thì chấm ước lượng và để v = 1 | Tránh nhầm lẫn nối xương giữa hai người và tránh xóa nhầm khớp của người đứng sau. | [train_16](outputs/vis_train/train_16.jpg) |
+| Người nhỏ đến mức nào thì không gán nữa | Bounding box có chiều cao dưới 30 pixel hoặc mờ nhòe không phân biệt được đầu gối/khuỷu tay thì bỏ qua | Quá ít pixel khiến việc ước lượng sai lệch lớn, làm nhiễu tập huấn luyện. | [train_10](outputs/vis_train/train_10.jpg) |
 
 ## 3. Ba ca mơ hồ đã gặp (bắt buộc, ghi ít nhất 3)
 
